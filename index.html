@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FinanceFlow | Controle Financeiro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="topo">
+        <h1>FinanceFlow</h1>
+        <p>Controle suas finanças com inteligência.</p>
+    </header>
+
+    <main class="container">
+
+        <section class="resumo">
+            <div class="card">
+                <h3>Saldo atual</h3>
+                <p id="saldo">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>Receitas</h3>
+                <p id="receitas">R$ 0,00</p>
+            </div>
+
+            <div class="card">
+                <h3>Despesas</h3>
+                <p id="despesas">R$ 0,00</p>
+            </div>
+        </section>
+
+        <section class="formulario">
+            <h2>Nova movimentação</h2>
+
+            <form id="formMovimentacao">
+
+                <input
+                    type="text"
+                    id="descricao"
+                    placeholder="Descrição da movimentação"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="valor"
+                    placeholder="Valor (R$)"
+                    min="0.01"
+                    step="0.01"
+                    required
+                >
+
+                <select id="tipo" required>
+                    <option value="">Selecione o tipo</option>
+                    <option value="receita">Receita</option>
+                    <option value="despesa">Despesa</option>
+                </select>
+
+                <button type="submit">Adicionar movimentação</button>
+
+            </form>
+        </section>
+
+        <section class="historico">
+            <h2>Histórico de movimentações</h2>
+
+            <ul id="listaMovimentacoes"></ul>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
